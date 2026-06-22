@@ -1,0 +1,161 @@
+    <!-- SECTION 7: INTERACTIVE CALCULATORS & DATA TOOLS -->
+    <section id="calculators" class="py-24 bg-white border-b border-slate-200/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-widest text-[#F97316] font-bold">Interactive Tools</span>
+          <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-[#0B1220] mt-3">Simulate Your Tax Strategy</h2>
+          <p class="text-slate-500 font-light mt-4">Calculate income tax, GST splits, monthly EMIs, and exempt HRAs instantly with zero page reloads.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Navigation Sidebar (4 cols) -->
+          <div class="lg:col-span-4 flex flex-col gap-2.5">
+            <button data-calc="income-tax" class="calc-tab-btn active w-full flex items-center justify-between p-4 rounded-xl border border-[#F97316] bg-white text-left outline-none cursor-pointer shadow-sm transition-all">
+              <div>
+                <span class="block text-[#0B1220] font-bold text-sm">Income Tax Calculator</span>
+                <span class="block text-[10px] text-slate-550 font-light">Compare Old vs New Regimes</span>
+              </div>
+              <svg class="w-5 h-5 text-[#F97316]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <button data-calc="gst" class="calc-tab-btn w-full flex items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 text-left outline-none cursor-pointer hover:bg-slate-100/70 transition-all">
+              <div>
+                <span class="block text-slate-550 font-bold text-sm">GST Calculator</span>
+                <span class="block text-[10px] text-slate-550 font-light">Determine CGST/SGST splits</span>
+              </div>
+              <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <button data-calc="emi" class="calc-tab-btn w-full flex items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 text-left outline-none cursor-pointer hover:bg-slate-100/70 transition-all">
+              <div>
+                <span class="block text-slate-550 font-bold text-sm">EMI Calculator</span>
+                <span class="block text-[10px] text-slate-550 font-light">Simulate Loan repayment plans</span>
+              </div>
+              <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <button data-calc="hra" class="calc-tab-btn w-full flex items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 text-left outline-none cursor-pointer hover:bg-slate-100/70 transition-all">
+              <div>
+                <span class="block text-slate-550 font-bold text-sm">HRA Exemption Tool</span>
+                <span class="block text-[10px] text-slate-550 font-light">Optimize house rent allowances</span>
+              </div>
+              <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <button data-calc="tax-saving" class="calc-tab-btn w-full flex items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 text-left outline-none cursor-pointer hover:bg-slate-100/70 transition-all">
+              <div>
+                <span class="block text-slate-550 font-bold text-sm">Tax Savings Calculator</span>
+                <span class="block text-[10px] text-slate-550 font-light">Sections 80C & 80D investments</span>
+              </div>
+              <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <!-- Form Widget Container (8 cols) -->
+          <div class="lg:col-span-8 bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-8 shadow-sm relative overflow-hidden" id="calculator-workbench">
+            <!-- Dynamic Form injection from main.ts -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: CLIENT DIGITAL ONBOARDING PORTAL -->
+    <section id="upload-portal" class="py-24 bg-slate-50 border-b border-slate-200/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Text and benefits column (5 cols) -->
+          <div class="lg:col-span-5 flex flex-col gap-6 text-left">
+            <span class="text-xs uppercase tracking-widest text-[#F97316] font-extrabold">Instant Secure intake</span>
+            <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-[#0B1220]">Safe Digital Onboarding</h2>
+            <p class="text-slate-600 font-light leading-relaxed">
+              No physical office visits are needed. Safely drop your KYC documents (Aadhaar, PAN, Bank Statements, or prior GST filings) into our client digital dropzone.
+            </p>
+            <div class="space-y-3.5">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-[#25D366]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-slate-600 font-medium">Bank-level browser cryptography</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-[#25D366]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-slate-600 font-medium">Instant file categorization (PAN, HRA list, GSTIN docs)</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-[#25D366]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-slate-600 font-medium">Automated notification to tax drafting team</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drag and drop container (7 cols) -->
+          <div class="lg:col-span-7">
+            <div class="bg-white border-2 border-dashed border-slate-200 hover:border-[#F97316]/60 p-8 sm:p-12 rounded-2xl flex flex-col items-center justify-center text-center transition-all cursor-pointer relative shadow-sm hover:shadow-md" id="drag-drop-zone">
+              <input type="file" id="portal-file-picker" class="hidden" multiple accept=".pdf,.png,.jpg,.jpeg,.xlsx,.doc" />
+              
+              <div id="drop-zone-idle" class="flex flex-col items-center gap-5">
+                <div class="w-16 h-16 rounded-full bg-orange-50 border border-orange-100 flex items-center justify-center text-[#F97316]">
+                  <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-extrabold text-[#0B1220] text-base">Drag & Drop Documents Here</h3>
+                  <p class="text-xs text-slate-500 mt-1">or <span class="text-[#F97316] underline font-bold">browse files</span> from your local processor</p>
+                </div>
+                <span class="text-[10px] text-slate-400 font-mono font-semibold">SUPPORTS: PDF, PNG, JPG, EXCEL (MAX 25MB)</span>
+              </div>
+
+              <!-- Uploading / Success states -->
+              <div id="drop-zone-active" class="hidden w-full flex flex-col items-center gap-5">
+                <div class="w-14 h-14 bg-emerald-100 border border-emerald-250 text-emerald-600 rounded-full flex items-center justify-center animate-bounce">
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div class="w-full">
+                  <h4 class="font-heading font-bold text-[#0B1220] text-sm" id="upload-status-title">Processing Secure Upload...</h4>
+                  <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mt-3 max-w-[280px] mx-auto">
+                    <div id="upload-progress-bar" class="bg-gradient-to-r from-[#F97316] to-[#0B1220] h-full transition-all duration-300" style="width: 0%"></div>
+                  </div>
+                </div>
+                <ul id="uploaded-files-list" class="w-full text-xs text-slate-600 divide-y divide-slate-100 text-left px-4 max-w-sm mt-3 bg-slate-50 rounded p-3"></ul>
+                <button id="btn-reset-portal" class="hidden px-4 py-1.5 border border-slate-200 hover:border-slate-350 text-[10px] uppercase font-bold tracking-widest hover:text-[#0B1220] transition-all rounded text-slate-500 cursor-pointer">Onboard More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Exclusive Exit-Intent Promo Popup -->
+    <div id="exit-intent-popup" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
+      <div class="bg-white border border-slate-200 rounded-2xl max-w-md w-full p-6 sm:p-8 text-center relative shadow-2xl">
+        <button id="exit-popup-close" class="absolute top-4 right-4 text-slate-400 hover:text-[#F97316] cursor-pointer" title="Close">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <span class="text-xs uppercase tracking-widest text-[#F97316] font-extrabold block animate-pulse">Exclusive Exit Offer</span>
+        <h3 class="font-heading font-extrabold text-[#0B1220] text-xl mt-2 leading-snug">Claim Free ₹1,500 <br />Business Compliance Audit</h3>
+        <p class="text-xs text-slate-500 mt-2.5 leading-relaxed font-light">Before you leave, secure a full, zero-cost analysis of your business's GST filings and identify unclaimed Input Tax Credit (ITC). Enter details to claim your voucher immediately.</p>
+        
+        <form id="exit-lead-ledger" class="space-y-3.5 mt-6 text-left">
+          <div class="flex flex-col gap-1">
+            <input type="text" id="e-name" required class="bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded text-xs text-[#0B1220] focus:border-[#F97316] focus:outline-none" placeholder="Your full business name" />
+          </div>
+          <div class="flex flex-col gap-1">
+            <input type="tel" id="e-phone" required class="bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded text-xs text-[#0B1220] focus:border-[#F97316] focus:outline-none" placeholder="WhatsApp ready phone coordinate" />
+          </div>
+          <button type="submit" class="w-full py-3.5 bg-[#F97316] hover:bg-[#F97316]/90 text-white font-bold text-xs uppercase tracking-widest rounded shadow-lg cursor-pointer">Activate Free Audit Voucher</button>
+        </form>
+      </div>
+    </div>

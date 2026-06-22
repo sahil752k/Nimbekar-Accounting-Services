@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0B1220;
+  --color-secondary: #F97316;
+  --color-accent: #D4AF37;
+  --color-dark-bg: #07111F;
+  --color-light-bg: #F8FAFC;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: "Poppins", system-ui, -apple-system, sans-serif;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F97316;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F8FAFC;
+  color: #0B1220;
+  overflow-x: hidden;
+}
+
+/* Luxury card glow effect */
+.luxury-glow {
+  position: relative;
+}
+.luxury-glow::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(249, 115, 22, 0.1) 100%);
+  border-radius: inherit;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.luxury-glow:hover::after {
+  opacity: 1;
+}
+
+/* Keyframe Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-12px) translateX(6px); }
+}
+
+@keyframes float-slower {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(8px) translateX(-8px); }
+}
+
+@keyframes border-glow-flow {
+  0%, 100% { border-color: rgba(249, 115, 22, 0.2); }
+  50% { border-color: rgba(212, 175, 55, 0.4); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-float-slower {
+  animation: float-slower 10s ease-in-out infinite;
+}
+
+/* ULTRA-LUXURY 3D HERO CARD AND ENVIRONMENT */
+.dot-grid-bg {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.04) 1.5px, transparent 1.5px), radial-gradient(rgba(249, 115, 22, 0.01) 1px, transparent 1px);
+  background-size: 24px 24px, 12px 12px;
+}
+
+.perspective-1500 {
+  perspective: 1500px;
+}
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+}
+
+.tilt-card-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.18) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10;
+  mix-blend-mode: screen;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tilt-card:hover .tilt-card-glow {
+  opacity: 1;
+}
+
+/* 3D layers inside the card for authentic spatial parallax */
+.layer-depth-1 {
+  transform: translateZ(15px);
+}
+.layer-depth-2 {
+  transform: translateZ(32px);
+}
+.layer-depth-3 {
+  transform: translateZ(48px);
+}
+
+/* Luxury card gloss sweep */
+@keyframes gloss-sweep {
+  0% { transform: translate(-100%, -100%) rotate(45deg); }
+  40%, 100% { transform: translate(100%, 100%) rotate(45deg); }
+}
+
+.gloss-sweep-element {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.gloss-sweep-element::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 45%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 55%
+  );
+  animation: gloss-sweep 7s infinite ease-in-out;
+}
+
+.neon-border-glow {
+  animation: border-glow-flow 8s infinite ease-in-out;
+}
+
+/* SLEEK INTERFACE OVERRIDES FOR ENTIRE CALCULATORS WORKBENCH */
+#calculator-workbench {
+  background-color: #FFFFFF !important;
+  color: #0B1220 !important;
+}
+#calculator-workbench h3 {
+  color: #0B1220 !important;
+  font-weight: 800 !important;
+}
+#calculator-workbench h4 {
+  color: #F97316 !important;
+  font-weight: 800 !important;
+}
+#calculator-workbench label {
+  color: #475569 !important;
+  font-weight: 700 !important;
+}
+#calculator-workbench .text-white {
+  color: #0B1220 !important;
+}
+#calculator-workbench .text-slate-300 {
+  color: #334155 !important;
+}
+#calculator-workbench .text-slate-400 {
+  color: #475569 !important;
+}
+#calculator-workbench .text-slate-450 {
+  color: #64748B !important;
+}
+#calculator-workbench .text-slate-500 {
+  color: #64748B !important;
+}
+#calculator-workbench .text-slate-550 {
+  color: #475569 !important;
+}
+#calculator-workbench .text-accent {
+  color: #F97316 !important;
+}
+#calculator-workbench .border-slate-800 {
+  border-color: #E2E8F0 !important;
+}
+#calculator-workbench .border-slate-850 {
+  border-color: #E2E8F0 !important;
+}
+#calculator-workbench .bg-slate-900 {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+}
+#calculator-workbench .bg-slate-950\/40 {
+  background-color: #F8FAFC !important;
+  border: 1px solid #E2E8F0 !important;
+}
+#calculator-workbench .bg-slate-900\/40 {
+  background-color: #F8FAFC !important;
+  border: 1px solid #E2E8F0 !important;
+}
+#calculator-workbench .bg-slate-900\/60 {
+  background-color: #F8FAFC !important;
+  border: 1px solid #E2E8F0 !important;
+}
+#calculator-workbench input[type="range"] {
+  background-color: #E2E8F0 !important;
+  accent-color: #F97316 !important;
+}
+#calculator-workbench select,
+#calculator-workbench input[type="number"],
+#calculator-workbench input[type="text"] {
+  background-color: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  border-radius: 0.75rem !important;
+  color: #0B1220 !important;
+  font-weight: 500 !important;
+  padding: 0.5rem 0.75rem !important;
+  outline: none !important;
+}
+#calculator-workbench select:focus,
+#calculator-workbench input[type="number"]:focus,
+#calculator-workbench input[type="text"]:focus {
+  border-color: #F97316 !important;
+}
+#calculator-workbench table {
+  color: #0B1220 !important;
+}
+#calculator-workbench th {
+  color: #475569 !important;
+  background-color: #F1F5F9 !important;
+  border-color: #E2E8F0 !important;
+}
+#calculator-workbench td {
+  border-color: #E2E8F0 !important;
+}
+#calculator-workbench .border-\[\#D4AF37\]\/15 {
+  border-color: rgb(226, 232, 240) !important;
+}

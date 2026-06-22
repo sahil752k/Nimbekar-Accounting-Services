@@ -1,0 +1,6 @@
+{
+  "name": "Nimbekar Accounting Services",
+  "description": "Premium Taxation, GST Compliance, Business Registration, and Financial Consulting Services in Washim, Maharashtra.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
